@@ -1,0 +1,20 @@
+{
+  "files": {
+    "clients/nodeclient.js": [
+      {
+        "id": "7ab58dd7-1fb8-4a0d-a409-3a1a113218e8",
+        "line": 29,
+        "version": 63,
+        "index": 815
+      }
+    ],
+    "index.js": [
+      {
+        "id": "3b1e01d7-b563-46ad-97e6-735941aaf964",
+        "line": 5,
+        "version": 1667,
+        "index": 130
+      }
+    ]
+  }
+}
