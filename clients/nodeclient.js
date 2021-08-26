@@ -24,9 +24,11 @@ class DataBase {
     this.req(url, function (error, response, html) {
       if (!error && response.statusCode == 200) {
         var $ = ch.load(html);
-        JSON.parse($.text())[key]
+        duck = JSON.parse($.text())[key]
       }
     });
+
+    return duck;
   }
   setitem(key, value) {
     const url = this.strf('https://jdb.amoghthecool.repl.co/set/|username|/|project|/|key|/|value|/|password|', {
