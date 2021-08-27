@@ -13,22 +13,19 @@ class DataBase {
     }
     return t
   }
-  getitem(key) {
+  getitem(key, handler) {
     const url = this.strf('https://jdb.amoghthecool.repl.co/data/|username|/|project|/|password|', {
       "username": this.username,
       "project": this.project,
       "password": this.password
     }); 
     const ch = this.cheerio;
-
     this.req(url, function (error, response, html) {
       if (!error && response.statusCode == 200) {
         var $ = ch.load(html);
-        duck = JSON.parse($.text())[key]
+        handler(JSON.parse($.text())[key])
       }
     });
-
-    return duck;
   }
   setitem(key, value) {
     const url = this.strf('https://jdb.amoghthecool.repl.co/set/|username|/|project|/|key|/|value|/|password|', {
